@@ -1,0 +1,36 @@
+{
+    "name": "Maruhubi Venue Booking System",
+    "short_name": "MVBS",
+    "start_url": "/index.php",
+    "display": "standard",
+    "background_color": " rgba(00, 00, 50, 1)",
+    "theme_color": "",
+    "orientation": "portrait-primary",
+    "icons": [{
+        "src": "css/booking-logo.png",
+        "type": "image/png",
+        "sizes": "96x96"
+    }, {
+        "src": "css/booking-logo.png",
+        "type": "image/png",
+        "sizes": "96x96"
+    }],
+    "discription": "",
+    "dir": "auto",
+    "lang": "en",
+    "display_override": [
+        "standalone"
+    ],
+    "categories": [
+        "education",
+        "personalization",
+        "productivity",
+        "social"
+    ],
+    "shortcuts": [{
+        "name": "",
+        "url": "/",
+        "description": ""
+    }],
+    "related_applications": []
+}
