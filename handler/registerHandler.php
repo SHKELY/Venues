@@ -24,7 +24,7 @@ if (isset($_POST['regiter'])) {
         $stmt->execute(array(":fname" => $name, ":phone" => $phone, ":userId" => $userID));
         echo "<script>alert('Success!')</script>";
         header("location: ../login.php");
-    }{
+    }else{
          header("location: ../register.php?error=true");
        
     }
