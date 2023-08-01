@@ -3,7 +3,7 @@
     "short_name": "MVBS",
     "start_url": "/index.php",
     "display": "standalone",
-    "background_color": " #000033",
+    "background_color": "#010133",
     "theme_color": "#D5AD1D",
     "orientation": "portrait-primary",
     "icons": [{
@@ -470,7 +470,7 @@
     "shortcuts": [{
         "name": "",
         "url": "/",
-        "description": ""
+        "description": "This app is made by Hashim Abdalla Seif which offer you perfec services for booking the venues"
     }],
     "related_applications": []
 }
