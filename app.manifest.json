@@ -2,9 +2,9 @@
     "name": "Maruhubi Venue Booking System",
     "short_name": "MVBS",
     "start_url": "/index.php",
-    "display": "standard",
-    "background_color": " rgba(00, 00, 50, 1)",
-    "theme_color": "",
+    "display": "standalone",
+    "background_color": " #000033",
+    "theme_color": "#D5AD1D",
     "orientation": "portrait-primary",
     "icons": [{
             "src": "windows11/SmallTile.scale-100.png",
@@ -459,7 +459,7 @@
     "dir": "auto",
     "lang": "en",
     "display_override": [
-        "standalone"
+        "window-controls-overlay"
     ],
     "categories": [
         "education",

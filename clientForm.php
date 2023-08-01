@@ -21,7 +21,6 @@ if (isset($_POST['submit'])) {
     $location = $_POST['address'];
     $part = $_POST['participant'];
     $requrement = $_POST['req'];
-    // $image = $_FILES['image'];
 
     $qir = $conn->prepare("SELECT * FROM `booking_t` WHERE `Date` = :date AND venueId =:Vid");
     $qir->execute(array(":date" => $date,":Vid"=>$venueId));
@@ -37,7 +36,6 @@ if (isset($_POST['submit'])) {
         echo $_SESSION['bookingID'];
 
     $user = $_SESSION['user'];
-    // require_once("connection.php");
     if (isset($_FILES["letter"])) {
         $letter = $_FILES["letter"];
 
