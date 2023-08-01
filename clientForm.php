@@ -21,15 +21,16 @@ if (isset($_POST['submit'])) {
     $location = $_POST['address'];
     $part = $_POST['participant'];
     $requrement = $_POST['req'];
+    $status = $_POST['status'];
 
     $qir = $conn->prepare("SELECT * FROM `booking_t` WHERE `Date` = :date AND venueId =:Vid");
     $qir->execute(array(":date" => $date,":Vid"=>$venueId));
     if ($qir->rowCount() == 0) {
 
 
-    $stmt = $conn->prepare("INSERT INTO `booking_t`( `customerId`, `name`, `service_type`, `Participants`, `VenueId`, `requament`, `Date`, `S_time`, `E_time`, `letter`)
-     VALUES (:cusId,:nam,:typ,:participant,:venueId,:req,:dat,:s_time,:e_time,:letter)");
-    $stmt->execute(array(":cusId" => $cusId, ":nam" => $name, ":typ" => $type, ":participant" => $part, ":venueId" => $venueId, ":req" => $requrement, ":dat" => $date, ":s_time" => $s_time, ":e_time" => $e_time, ":letter" => "default"));
+    $stmt = $conn->prepare("INSERT INTO `booking_t`( `customerId`, `name`, `service_type`, `Participants`, `VenueId`, `requament`, `Date`, `S_time`, `E_time`, `letter`, `status`)
+     VALUES (:cusId,:nam,:typ,:participant,:venueId,:req,:dat,:s_time,:e_time,:letter,:status)");
+    $stmt->execute(array(":cusId" => $cusId, ":nam" => $name, ":typ" => $type, ":participant" => $part, ":venueId" => $venueId, ":req" => $requrement, ":dat" => $date, ":s_time" => $s_time, ":e_time" => $e_time, ":letter" => "default", ":status" => 0));
     $Id = $conn->lastInsertId();
     $_SESSION['bookingID'] = $Id;
 
@@ -116,6 +117,7 @@ header("location: ./payment.php");
                     <label for="end" class="form-label">End Time:</label>
                     <input type="time" name="e_time" class="form-control" id="#" required>
                 </div>
+                <input type="number" name="status"  class="form-control" id="#" readonly hidden>
 
                 <hr>
 
@@ -131,6 +133,7 @@ header("location: ./payment.php");
                 <input type="number" name="cusID" value="<?php echo $Cst_Id; ?>" class="form-control" id="#" readonly hidden>
 
                 <input type="number" name="venueID" value="<?php echo $_GET['id']; ?>" class="form-control" id="#" readonly hidden>
+                
 
 
                 <div class="col-12">

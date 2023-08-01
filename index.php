@@ -54,7 +54,7 @@ include('include/topbar.php');
 		<div class="row mb-3">
 			<div class="col-md-6 offset-md-3">
 				<div class="btn w-100">			
-				<a href="AllVenue.php" class="btn btn-dark mybg">Venue List</a></div>
+				<a href="allVenue.php" class="btn btn-dark mybg">Venue List</a></div>
 				</div>
 			</div>
 		</div>

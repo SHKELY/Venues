@@ -4,7 +4,7 @@
     "start_url": "/index.php",
     "display": "standalone",
     "background_color": "#010133",
-    "theme_color": "#D5AD1D",
+    "theme_color": "#010133",
     "orientation": "portrait-primary",
     "icons": [{
             "src": "windows11/SmallTile.scale-100.png",
